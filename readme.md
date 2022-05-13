@@ -4,7 +4,7 @@
 ### _Descripción_
 ###### Modelo de costos médicos individuales facturados por el seguro de salud
 ---
-#### _Dataset_
+### _Dataset_
 ###### [Información de Kaggle, presiona para redireccionar](https://www.kaggle.com/datasets/mirichoi0218/insurance?resource=download)
 ---
 ### _Requerimientos_
@@ -36,7 +36,7 @@ python model.py
 | *21* | *Female* | *25.8*  | *0* | *No*  | *Southwest* | **2007.945**   |
 | *61* | *Female* | *29.07* | *0* | *Yes* | *Northwest* | **29141.3603** |
 ---
-#### _Autores_
+### _Autores_
 ###### Juan Álvaro Castro Castañeda A01635794
 ###### Héctor Manuel Cárdenas Yáñez A01634615
 ###### Saúl Valdivia Sandoval A01625437
