@@ -1,13 +1,15 @@
-#Medical Cost 
-#https://www.kaggle.com/datasets/mirichoi0218/insurance?resource=download
-#saul
+# Medical Cost
+# https://www.kaggle.com/datasets/mirichoi0218/insurance?resource=download
+
 import pandas as pd
 import numpy as np 
-from sklear.model_selection import train_test_split
-from sklear.linear_model import LinearRegression
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LinearRegression
 import statsmodels.api as sm 
 from sklearn import preprocessing
 import matplotlib.pyplot as plt 
+import seaborn as sns
+sns.set_theme(color_codes=True)
 
 insurance = pd.read_csv('./insurance.csv')
 insurance = insurance[:-5]
@@ -54,7 +56,16 @@ olsmod = sm.OLS(y_test, sm.add_constant(x_test)).fit()
 print(olsmod.summary())
 
 print(insurance.head())
+
 # Imprimir predicción
 print(f'Medical Cost: ${LR.predict([[age,sex,bmi,children,smoker,region]])[0][0]}')
 
+# Hacer gráficas para los datos
+graphInfo = pd.DataFrame()
+graphInfo['y_test'] = y_test.flatten()
+graphInfo['y_prediction'] = y_prediction.flatten()
 
+predicted = sns.lmplot(x='y_test', y='y_prediction', data=graphInfo)
+predicted.fig.suptitle('Test Value vs Prediction')
+
+plt.show()
