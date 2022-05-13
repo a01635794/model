@@ -44,3 +44,17 @@ y = np.array(insurance[['charges']])
 # Separar dataframe
 x_train, x_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
 
+# Elegir regresión, entrenar modelo y realizar predicciones
+LR = LinearRegression()
+LR.fit(x_train, y_train)
+y_prediction = LR.predict(x_test)
+
+# Imprimir resultados
+olsmod = sm.OLS(y_test, sm.add_constant(x_test)).fit()
+print(olsmod.summary())
+
+print(insurance.head())
+# Imprimir predicción
+print(f'Medical Cost: ${LR.predict([[age,sex,bmi,children,smoker,region]])[0][0]}')
+
+
