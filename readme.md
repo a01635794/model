@@ -8,24 +8,26 @@
 ###### [Información de Kaggle, presiona para redireccionar](https://www.kaggle.com/datasets/mirichoi0218/insurance?resource=download)
 ---
 #### _Requerimientos_
-###### Python (-v 3.9.12)
-###### Pip (-v 21.2.4)
-###### IDE: Recomendado Visual Studio Code
-###### Librerías: pandas, numpy, sklearn, statsmodels, matplotlib, seaborn
+###### * Python (-v 3.9.12)
+###### * Pip (-v 21.2.4)
+###### * IDE: Recomendado Visual Studio Code
+###### * Librerías: pandas, numpy, sklearn, statsmodels, matplotlib, seaborn
 ---
 #### _Iniciar_
+###### Clonar repositorio
 ```Git
 git clone https://github.com/a01635794/model.git
 ```
+###### Instalar librerías necesarias
 ```Pip
 pip install pandas numpy sklearn statsmodels matplotlib seaborn
 ```
+###### Iniciar programa principal
 ```Python
 python model.py 
 ```
 ---
 #### _Casos de Prueba_
-
 | Age | Sex | BMI | Children | Smoker | Region | Charges |
 |:---:|:---:|:---:|:--------:|:------:|:------:|:-------:|
 | *50* | *Male*   | *30.97* | *3* | *No*  | *Northwest* | **10600.5483** |
@@ -33,3 +35,6 @@ python model.py
 | *18* | *Female* | *36.85* | *0* | *No*  | *Southeast* | **1629.8335**  |
 | *21* | *Female* | *25.8*  | *0* | *No*  | *Southwest* | **2007.945**   |
 | *61* | *Female* | *29.07* | *0* | *Yes* | *Northwest* | **29141.3603** |
+---
+#### _Autores_
+###### N
