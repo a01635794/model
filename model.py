@@ -35,7 +35,7 @@ X = np.array(insurance.drop(['charges'], axis=1))
 y = np.array(insurance[['charges']])
 
 # Separar dataframe
-x_train, x_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
+x_train, x_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
 # Elegir regresión, entrenar modelo y realizar predicciones
 LR = LinearRegression()
